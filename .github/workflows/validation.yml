@@ -1,16 +1,13 @@
-name: Validation
-
+name: github-actions
+run-name: ${{ github.actor }} is doing things
 on: [push]
-
-permissions:
-  contents: read
-  pull-requests: write
-
 jobs:
-  ansible-syntax-check:
-    runs-on: python:3.9
+  check-bats-version:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: pip install -Ur requirements-build.txt
-      - run: pip install -Ur requirements.txt
-      - run: ansible-playbook -i ./hosts ./test/ansible.yml -vv --syntax-check
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '14'
+      - run: npm install -g bats
+      - run: bats -v
