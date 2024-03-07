@@ -1,0 +1,4 @@
+# Install build dependencies first
+# Having all in the same requirements.txt caused issues on newer, fresh Mac where `wheel` was required before `ansible`
+pip==23.2.1
+wheel==0.41.0

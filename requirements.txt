@@ -1,0 +1,2 @@
+# Runtime dependencies
+ansible==8.2.0
