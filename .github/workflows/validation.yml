@@ -1,12 +1,6 @@
 name: Validation
 
-on:
-  push:
-    branches:
-      # - '*' # matches every branch that doesn't contain a '/'
-      # - '*/*' # matches every branch containing a single '/'
-      - '**' # matches every branch
-  workflow_call:
+on: [push]
 
 permissions:
   contents: read
@@ -16,6 +10,7 @@ jobs:
   ansible-syntax-check:
     runs-on: python:3.9
     steps:
+      - uses: actions/checkout@v4
       - run: pip install -Ur requirements-build.txt
       - run: pip install -Ur requirements.txt
       - run: ansible-playbook -i ./hosts ./test/ansible.yml -vv --syntax-check
