@@ -1,6 +1,7 @@
 {
   "packages": {
     ".": {
+      "release-type": "generic",
       "extra-files": [
         {
           "type": "generic",
