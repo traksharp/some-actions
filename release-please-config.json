@@ -1,5 +1,8 @@
 {
   "extra-files": [
-    "tf/main.tf"
+    {
+      "type": "generic",
+      "path": "tf/main.tf"
+    }
   ]
 }
