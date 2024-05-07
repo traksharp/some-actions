@@ -1,0 +1,27 @@
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+name: release-please
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          gh api \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            /rate_limit
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - uses: google-github-actions/release-please-action@v4
+        with:
+          release-type: simple
+          token: ${{ github.token }}
