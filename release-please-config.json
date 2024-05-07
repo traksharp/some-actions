@@ -1,13 +1,8 @@
 {
-  "packages": {
-    ".": {
-      "release-type": "simple",
-      "extra-files": [
-        {
-          "type": "generic",
-          "path": "tf/main.tf"
-        }
-      ]
+  "extra-files": [
+    {
+      "type": "generic",
+      "path": "tf/main.tf"
     }
-  }
+  ]
 }
