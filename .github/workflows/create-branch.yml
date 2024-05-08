@@ -29,6 +29,9 @@ jobs:
 #          git remote add gh-token "https://${{ secrets.GITHUB_TOKEN }}@github.com/google-github-actions/release-please-action.git"
         run: |
           git checkout -b something-to-main
+          touch test-update
+          git add test-update
+          git commit -m "This is a test"
           git push origin something-to-main
 #          git push origin :v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }} || true
 #          git tag -a v${{ steps.release.outputs.major }} -m "Release v${{ steps.release.outputs.major }}"
