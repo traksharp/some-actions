@@ -1,9 +1,10 @@
 on:
   push:
-#    tags:
-#      - '*'
-    branches:
-      - main
+    tags:
+      - '*'
+#      - 'v[0-9]+.[0-9]+.[0-9]+'
+#    branches:
+#      - main
 
 permissions:
   contents: write
@@ -29,13 +30,13 @@ jobs:
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git checkout -b something-to-main
-          sed -i 's/version/0.3.0/g' tf/main.tf
+          git checkout -b deploy-${{ github.ref_name }}-to-stg
+          sed -i 's/version/${{ github.ref_name }}/g' tf/main.tf
           git add tf/main.tf
-          git commit -m "This is a test"
-          git push origin something-to-main
+          git commit -m "chore(main): Deploy ${{ github.ref_name }} to stg"
+          git push origin deploy-${{ github.ref_name }}-to-stg
 
       - name: create pull request
-        run: gh pr create -B main -H something-to-main --title 'Merge branch_to_merge into base_branch' --body 'Created by Github action'
+        run: gh pr create -B main -H deploy-${{ github.ref_name }}-to-stg --title 'Deploy ${{ github.ref_name }} to stg' --body 'Created by Github action'
         env:
           GITHUB_TOKEN: ${{ github.token }}
