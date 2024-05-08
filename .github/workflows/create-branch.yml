@@ -1,5 +1,7 @@
 on:
   push:
+#    tags:
+#      - '*'
     branches:
       - main
 
@@ -33,4 +35,7 @@ jobs:
           git commit -m "This is a test"
           git push origin something-to-main
 
-      # create PR
+      - name: create pull request
+        run: gh pr create -B main -H something-to-main --title 'Merge branch_to_merge into base_branch' --body 'Created by Github action'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
