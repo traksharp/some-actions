@@ -1,0 +1,39 @@
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+name: branch and pr
+
+jobs:
+  create-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          gh api \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            /rate_limit
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - uses: actions/checkout@v4
+
+      - name: create & push branch
+#          git config user.name github-actions[bot]
+#          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+#          git remote add gh-token "https://${{ secrets.GITHUB_TOKEN }}@github.com/google-github-actions/release-please-action.git"
+        run: |
+          git checkout -b something-to-main
+          git push origin something-to-main
+#          git push origin :v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }} || true
+#          git tag -a v${{ steps.release.outputs.major }} -m "Release v${{ steps.release.outputs.major }}"
+#          git tag -a v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }} -m "Release v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}"
+#          git push origin v${{ steps.release.outputs.major }}
+#          git push origin v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}
+
+      # create PR
