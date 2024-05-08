@@ -28,8 +28,8 @@ jobs:
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git checkout -b something-to-main
-          touch test-update
-          git add test-update
+          sed -i 's/version/0.3.0/g' tf/main.tf
+          git add tf/main.tf
           git commit -m "This is a test"
           git push origin something-to-main
 
