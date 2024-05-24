@@ -1,4 +1,4 @@
-name: Validation
+name: some/varied/action
 
 on: [push]
 
