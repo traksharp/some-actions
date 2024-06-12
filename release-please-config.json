@@ -8,6 +8,24 @@
           "path": "tf/main.tf"
         }
       ]
+    },
+    "modules/module-one": {
+      "component": "module-one",
+      "extra-files": [
+        {
+          "type": "generic",
+          "path": "modules/module-one/main.tf"
+        }
+      ]
+    },
+    "modules/module-two": {
+      "component": "module-two",
+      "extra-files": [
+        {
+          "type": "generic",
+          "path": "modules/module-two/main.tf"
+        }
+      ]
     }
   }
 }
