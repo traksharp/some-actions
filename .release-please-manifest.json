@@ -1,5 +1,5 @@
 {
-  ".": "1.0.0",
-  "modules/module-one": "2.1.0",
+  ".": "1.1.0",
+  "modules/module-one": "2.2.0",
   "modules/module-two": "4.0.0"
 }
