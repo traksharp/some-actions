@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.2.0](https://github.com/traksharp/some-actions/compare/module-one-v3.1.0...module-one-v3.2.0) (2024-06-14)
+
+
+### Features
+
+* Fixing ([bfbfb9c](https://github.com/traksharp/some-actions/commit/bfbfb9cf6ba035dbd2a1972aada3c25c14c5485b))
+
 ## [3.1.0](https://github.com/traksharp/some-actions/compare/module-one-v3.0.1...module-one-v3.1.0) (2024-06-14)
 
 
