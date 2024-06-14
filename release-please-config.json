@@ -14,7 +14,7 @@
       "extra-files": [
         {
           "type": "generic",
-          "path": "module-one/main.tf"
+          "path": "main.tf"
         }
       ]
     },
@@ -23,7 +23,7 @@
       "extra-files": [
         {
           "type": "generic",
-          "path": "modules/module-two/main.tf"
+          "path": "main.tf"
         }
       ]
     }
