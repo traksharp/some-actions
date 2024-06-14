@@ -12,15 +12,20 @@ name: release-please
 jobs:
   release-please:
     runs-on: ubuntu-latest
+    outputs:
+      release_created: ${{ steps.release.outputs.release_created }}
+      tag_name: ${{ steps.release.outputs.tag_name }}
+      sha: ${{ steps.release.outputs.sha }}
     steps:
-      - run: |
-          gh api \
-            -H "Accept: application/vnd.github+json" \
-            -H "X-GitHub-Api-Version: 2022-11-28" \
-            /rate_limit
-        env:
-          GH_TOKEN: ${{ github.token }}
-
-      - uses: google-github-actions/release-please-action@v4
+      - uses: googleapis/release-please-action@v4
+        id: release
         with:
           token: ${{ github.token }}
+
+  tag-output:
+    runs-on: ubuntu-latest
+    needs: release-please
+    steps:
+      - env:
+          OUTPUT_TAGS: ${{needs.release-please.outputs.tag_name}}
+        run: echo "$OUTPUT_TAGS"
