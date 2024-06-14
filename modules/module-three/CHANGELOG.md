@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/traksharp/some-actions/compare/module-three-v1.0.0...module-three-v1.1.0) (2024-06-14)
+
+
+### Features
+
+* Output testing ([bdcbbd2](https://github.com/traksharp/some-actions/commit/bdcbbd2da75c7de9b6d227f11acf3683c483514f))
+
 ## 1.0.0 (2024-06-14)
 
 

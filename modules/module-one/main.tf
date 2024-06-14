@@ -1,11 +1,11 @@
 locals {
-  version = "v3.0.1"  # x-release-please-version
-  short_version = "3.0.1"  # x-release-please-version
-  module_version = "module-one-v3.0.1"  # x-release-please-version
+  version = "v3.1.0"  # x-release-please-version
+  short_version = "3.1.0"  # x-release-please-version
+  module_version = "module-one-v3.1.0"  # x-release-please-version
 }
 
 module "testing" {
-  source = "git::https://example.com/vpc.git?ref=3.0.1"  # x-release-please-version
+  source = "git::https://example.com/vpc.git?ref=3.1.0"  # x-release-please-version
 }
 
 module "adding_new" {
