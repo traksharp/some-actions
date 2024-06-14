@@ -11,4 +11,3 @@ module "testing" {
 module "adding_new" {
   source = "something-else"
 }
-
