@@ -18,6 +18,15 @@
           "path": "main.tf"
         }
       ]
+    },
+    "modules/module-three": {
+      "component": "module-three",
+      "extra-files": [
+        {
+          "type": "generic",
+          "path": "main.tf"
+        }
+      ]
     }
   }
 }
