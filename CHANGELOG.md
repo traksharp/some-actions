@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.2.0](https://github.com/traksharp/some-actions/compare/v1.1.0...v1.2.0) (2024-06-14)
+
+
+### Features
+
+* Find my path please ([01faeb7](https://github.com/traksharp/some-actions/commit/01faeb7698006a488e54b2f3bdd86f45c79c2d32))
+* Path ([4f44708](https://github.com/traksharp/some-actions/commit/4f44708cc0b2e5977a4b44c1c9056360ed06c02f))
+* Trying something else ([0d54633](https://github.com/traksharp/some-actions/commit/0d5463347f21fdb3750faefc914069cd2194b989))
+* Update tag ([00ca10b](https://github.com/traksharp/some-actions/commit/00ca10b3efb41fc41f0661f8a7ed19ee5f8f73fb))
+
 ## [1.1.0](https://github.com/traksharp/some-actions/compare/v1.0.0...v1.1.0) (2024-06-13)
 
 
