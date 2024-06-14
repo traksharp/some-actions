@@ -1,5 +1,5 @@
 locals {
-  version = "v3.0.1"  # x-release-please-version
-  short_version = "3.0.1"  # x-release-please-version
-  module_version = "module-one-v3.0.1"  # x-release-please-version
+  version = "v1.0.0"  # x-release-please-version
+  short_version = "1.0.0"  # x-release-please-version
+  module_version = "module-one-v1.0.0"  # x-release-please-version
 }
