@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.0.1](https://github.com/traksharp/some-actions/compare/module-two-v5.0.0...module-two-v5.0.1) (2024-06-14)
+
+
+### Bug Fixes
+
+* Missing carriage return ([de0dc93](https://github.com/traksharp/some-actions/commit/de0dc93f7e314ad8d6d8d2899b57bfde543f9cf7))
+
 ## [5.0.0](https://github.com/traksharp/some-actions/compare/module-two-v4.0.0...module-two-v5.0.0) (2024-06-14)
 
 
