@@ -1,14 +1,6 @@
 {
   "release-type": "simple",
   "packages": {
-    ".": {
-      "extra-files": [
-        {
-          "type": "generic",
-          "path": "tf/main.tf"
-        }
-      ]
-    },
     "modules/module-one": {
       "component": "module-one",
       "extra-files": [
