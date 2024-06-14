@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.1](https://github.com/traksharp/some-actions/compare/module-one-v3.0.0...module-one-v3.0.1) (2024-06-14)
+
+
+### Bug Fixes
+
+* Missing carriage return ([fa1ef03](https://github.com/traksharp/some-actions/commit/fa1ef033ab4e73d8657c08e3ad28d9c9b0982984))
+
 ## [3.0.0](https://github.com/traksharp/some-actions/compare/module-one-v2.3.0...module-one-v3.0.0) (2024-06-14)
 
 
