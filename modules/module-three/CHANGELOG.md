@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/traksharp/some-actions/compare/module-three-v1.2.0...module-three-v1.3.0) (2024-06-14)
+
+
+### Features
+
+* Object ([eb529f3](https://github.com/traksharp/some-actions/commit/eb529f30d42d21d378f8b50e0f18164e80a1c4cf))
+
 ## [1.2.0](https://github.com/traksharp/some-actions/compare/module-three-v1.1.0...module-three-v1.2.0) (2024-06-14)
 
 
