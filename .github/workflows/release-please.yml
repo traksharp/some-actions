@@ -17,7 +17,7 @@ jobs:
       tag_name: ${{ steps.release.outputs.modulesmodule-one--tag_name }}
       sha: ${{ steps.release.outputs.sha }}
       paths: ${{ steps.release.outputs.paths_released }}
-      object: ${{ steps.release.outputs }}
+      object: ${{ toJSON(steps.release.outputs) }}
     steps:
       - uses: googleapis/release-please-action@v4
         id: release
