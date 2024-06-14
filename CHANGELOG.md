@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0](https://github.com/traksharp/some-actions/compare/v1.0.0...v1.1.0) (2024-06-13)
+
+
+### Features
+
+* Another attempt ([c49f16d](https://github.com/traksharp/some-actions/commit/c49f16d3dc12b44d5fb56c1c614726a222adbd6d))
+* Attempt to fix release please version updater ([486bb63](https://github.com/traksharp/some-actions/commit/486bb63be78723d1cb4fcc248de992ff0cecf610))
+
 ## [1.0.0](https://github.com/traksharp/some-actions/compare/v0.2.1...v1.0.0) (2024-06-12)
 
 
