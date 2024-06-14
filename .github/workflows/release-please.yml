@@ -25,6 +25,7 @@ jobs:
   tag-output:
     runs-on: ubuntu-latest
     needs: release-please
+    if: ${{ needs.release-please.outputs.release_created }}
     steps:
       - env:
           OUTPUT_TAGS: ${{needs.release-please.outputs.tag_name}}
