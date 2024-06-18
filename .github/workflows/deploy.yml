@@ -25,4 +25,9 @@ jobs:
         with:
           name: deploy-plan
       - run: echo "Deploying!!" | tee -a $GITHUB_STEP_SUMMARY
-      - run: cat deploy-me.plan | tee -a $GITHUB_STEP_SUMMARY
+      - run: echo "This is the file to deploy:" | tee -a $GITHUB_STEP_SUMMARY
+      - run: |
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+          cat deploy-me.plan | tee -a $GITHUB_STEP_SUMMARY
+          echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
