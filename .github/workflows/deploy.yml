@@ -7,10 +7,12 @@ jobs:
   plan:
     runs-on: ubuntu-latest
     steps:
+      - run: echo "this file will deploy" > deploy-me.plan
       - run: echo "This is what i want to do" | tee -a $GITHUB_STEP_SUMMARY
 
   deploy:
     runs-on: ubuntu-latest
     environment: production
     steps:
-      - run: echo "I really want to deploy" | tee -a $GITHUB_STEP_SUMMARY
+      - run: echo "Deploying!!" | tee -a $GITHUB_STEP_SUMMARY
+      - run: cat deploy-me.plan | tee -a $GITHUB_STEP_SUMMARY
