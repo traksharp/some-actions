@@ -4,6 +4,11 @@ on:
       - main
 
 jobs:
+  plan:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "This is what i want to do"
+
   deploy:
     runs-on: ubuntu-latest
     environment: production
