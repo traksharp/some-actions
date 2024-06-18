@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.1.0](https://github.com/traksharp/some-actions/compare/module-two-v5.0.1...module-two-v5.1.0) (2024-06-18)
+
+
+### Features
+
+* Add dependabot and proper dependencies ([9bf44ee](https://github.com/traksharp/some-actions/commit/9bf44eea50a7f8d08337efcf22d45631aa9fb521))
+
 ## [5.0.1](https://github.com/traksharp/some-actions/compare/module-two-v5.0.0...module-two-v5.0.1) (2024-06-14)
 
 

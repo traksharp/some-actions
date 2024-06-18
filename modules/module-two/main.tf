@@ -1,5 +1,5 @@
 locals {
-  version = "5.0.1"  # x-release-please-version
+  version = "5.1.0"  # x-release-please-version
 }
 
 module "testing" {
