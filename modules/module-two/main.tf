@@ -3,9 +3,5 @@ locals {
 }
 
 module "testing" {
-  source = "git::https://example.com/vpc.git?ref=5.0.1"  # x-release-please-version
-}
-
-module "another" {
-  source = "testing"
+  source = "git::https://github.com/traksharp/some-actions.git//modules/module-two?ref=module-two-v5.0.0"
 }

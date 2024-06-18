@@ -1,0 +1,37 @@
+version: 2
+updates:
+  - package-ecosystem: "terraform"
+    directory: "/modules/module-one"
+    registries: "*"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 3
+    groups:
+      terraform:
+        patterns:
+          - "*"
+  - package-ecosystem: "terraform"
+    directory: "/modules/module-two"
+    registries: "*"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 3
+    groups:
+      terraform:
+        patterns:
+          - "*"
+  - package-ecosystem: "terraform"
+    directory: "/modules/module-three"
+    registries: "*"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 3
+    groups:
+      terraform:
+        patterns:
+          - "*"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 3
