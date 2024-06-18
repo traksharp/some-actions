@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/traksharp/some-actions/compare/module-three-v1.4.0...module-three-v1.5.0) (2024-06-18)
+
+
+### Features
+
+* Add dependabot and proper dependencies ([9bf44ee](https://github.com/traksharp/some-actions/commit/9bf44eea50a7f8d08337efcf22d45631aa9fb521))
+
 ## [1.4.0](https://github.com/traksharp/some-actions/compare/module-three-v1.3.0...module-three-v1.4.0) (2024-06-14)
 
 
