@@ -9,7 +9,7 @@ jobs:
   hash:
     runs-on: ubuntu-latest
     outputs:
-      artifact-hash: ${{ steps.archive.outputs.hash }}
+      artifact-hash: ${{ steps.hash.outputs.hash }}
 
     steps:
       - run: |
