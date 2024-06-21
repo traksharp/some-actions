@@ -11,7 +11,7 @@ jobs:
     steps:
       - run: |
           echo "hello world" > test.txt
-          echo ${{ hashFiles('**') }}
+          echo "${{ hashFiles('**') }}"
 
       - env:
           HASH: ${{ hashFiles('**') }}
