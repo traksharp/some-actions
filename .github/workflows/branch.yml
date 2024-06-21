@@ -12,3 +12,8 @@ jobs:
       - run: |
           echo "hello world" > test.txt
           echo ${{ hashFiles('**') }}
+
+      - env:
+          HASH: ${{ hashFiles('**') }}
+        run: |
+          echo "Hash: $HASH"
