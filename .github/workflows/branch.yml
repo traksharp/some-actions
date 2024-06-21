@@ -14,6 +14,10 @@ jobs:
           cat test.txt
           echo "${{ hashFiles('test.txt') }}"
 
+      - run: |
+          cat test.txt
+          echo "${{ hashFiles('test.txt') }}"
+
       - env:
           HASH: ${{ hashFiles('test.txt') }}
         run: |
