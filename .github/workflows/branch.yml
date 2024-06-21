@@ -32,12 +32,12 @@ jobs:
 
     steps:
       - run: |
-          echo "hello world" > test.txt
+          echo "hello world!" > test.txt
           cat test.txt
 
       - if: ${{ hashFiles('test.txt') != needs.hash.outputs.artifact-hash }}
         run: |
-          echo "Hashes didn't match ${{ hashFiles('test.txt') }} != ${{ needs.hash.outputs.artifact-hash }}
+          echo "Hashes check ${{ hashFiles('test.txt') }} == ${{ needs.hash.outputs.artifact-hash }}
           exit 1
 
       - run: |
