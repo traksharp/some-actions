@@ -1,0 +1,14 @@
+on:
+  push:
+    branches:
+      - "**"
+
+name: branch
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "hello world" > test.txt
+          echo ${{ hashFiles('test.txt') }}
