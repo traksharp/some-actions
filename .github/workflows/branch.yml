@@ -8,17 +8,29 @@ name: branch
 jobs:
   hash:
     runs-on: ubuntu-latest
+    outputs:
+      artifact-hash: ${{ steps.archive.outputs.hash }}
+
     steps:
       - run: |
           echo "hello world" > test.txt
           cat test.txt
           echo "${{ hashFiles('test.txt') }}"
 
-      - run: |
+      - id: hash
+        run: |
           cat test.txt
-          echo "${{ hashFiles('test.txt') }}"
+          echo "hash=${{ hashFiles('test.txt') }}" | tee -a $GITHUB_OUTPUT
 
       - env:
           HASH: ${{ hashFiles('test.txt') }}
         run: |
           echo "Hash: $HASH"
+
+  read:
+    runs-on: ubuntu-latest
+    needs: hash
+
+    steps:
+      - run: |
+          echo "hash: ${{ needs.hash.outputs.artifact-hash }}"
