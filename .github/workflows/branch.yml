@@ -15,7 +15,6 @@ jobs:
       - run: |
           echo "hello world" > test.txt
           cat test.txt
-          echo "${{ hashFiles('test.txt') }}"
 
       - id: hash
         run: |
@@ -32,6 +31,10 @@ jobs:
     needs: hash
 
     steps:
+      - run: |
+          echo "hello world" > test.txt
+          cat test.txt
+
       - if: ${{ hashFiles('test.txt') != needs.hash.outputs.artifact-hash }}
         run: |
           echo "Hashes didn't match ${{ hashFiles('test.txt') }} != ${{ needs.hash.outputs.artifact-hash }}
