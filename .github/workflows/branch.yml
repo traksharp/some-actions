@@ -6,9 +6,9 @@ on:
 name: branch
 
 jobs:
-  release-please:
+  hash:
     runs-on: ubuntu-latest
     steps:
       - run: |
           echo "hello world" > test.txt
-          echo ${{ hashFiles('test.txt') }}
+          echo ${{ hashFiles('**') }}
