@@ -11,9 +11,10 @@ jobs:
     steps:
       - run: |
           echo "hello world" > test.txt
-          echo "${{ hashFiles('**') }}"
+          cat test.txt
+          echo "${{ hashFiles('test.txt') }}"
 
       - env:
-          HASH: ${{ hashFiles('**') }}
+          HASH: ${{ hashFiles('test.txt') }}
         run: |
           echo "Hash: $HASH"
