@@ -1,0 +1,12 @@
+on:
+  pull_request:
+    branches:
+      - main
+
+name: pr-checks
+
+jobs:
+  pr-check:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Testing the build"
