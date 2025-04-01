@@ -1,0 +1,11 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "MANIFEST=$(jq -c . < .release-please-manifest.json)" >> $GITHUB_ENV
+      - run: echo '${{ fromJson(env.MANIFEST)["modules/module-one"] }}'
