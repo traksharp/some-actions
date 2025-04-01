@@ -12,3 +12,5 @@ jobs:
       - run: |
           echo "Testing the build"
           gh pr merge --auto -rs https://github.com/traksharp/some-actions/pull/27
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
