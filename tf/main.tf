@@ -5,3 +5,15 @@ module "testing" {
 }
 
 # module-one-v3.6.4
+
+output "module_one" {
+  value = var.module_one
+}
+
+output "module_two" {
+  value = var.module_two
+}
+
+output "module_three" {
+  value = var.module_three
+}
