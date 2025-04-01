@@ -37,6 +37,8 @@ jobs:
           git push origin deploy-${{ github.ref_name }}-to-stg
 
       - name: create pull request
-        run: gh pr create -B main -H deploy-${{ github.ref_name }}-to-stg --title 'Deploy ${{ github.ref_name }} to stg' --body 'Created by Github action'
+        run: |
+          PR=`gh pr create -B main -H deploy-${{ github.ref_name }}-to-stg --title 'Deploy ${{ github.ref_name }} to stg' --body 'Created by Github action'`
+          gh pr merge --auto -s $PR
         env:
           GITHUB_TOKEN: ${{ github.token }}
