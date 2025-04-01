@@ -9,4 +9,8 @@ jobs:
   pr-check:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Testing the build"
+      - run: |
+          echo "Testing the build"
+          gh pr merge --auto -s https://github.com/traksharp/some-actions/pull/27
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
