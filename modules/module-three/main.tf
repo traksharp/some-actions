@@ -5,5 +5,5 @@ locals {
 }
 
 module "testing" {
-  source = "git::https://github.com/traksharp/some-actions.git//modules/module-one?ref=module-one-v3.5.0 "
+  source = "git::https://github.com/traksharp/some-actions.git//modules/module-one?ref=module-one-v3.6.4 "
 }
