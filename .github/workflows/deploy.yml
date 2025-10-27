@@ -15,7 +15,7 @@ jobs:
           cat deploy-me.plan | tee -a $GITHUB_STEP_SUMMARY
           echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           name: deploy-plan
           path: deploy-me.plan
